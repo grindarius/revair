@@ -1,0 +1,27 @@
+{
+  "name": "revair",
+  "version": "1.0.0",
+  "description": "Ticket booking, redefined. v2",
+  "private": true,
+  "keywords": [
+    "ticket",
+    "shows",
+    "booking"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/grindarius/revair#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindarius/revair.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grindarius/revair/issues"
+  },
+  "author": "Revair Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "7.32.0"
+  }
+}

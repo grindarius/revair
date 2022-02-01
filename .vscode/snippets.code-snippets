@@ -1,0 +1,84 @@
+{
+  "Vue SPA template": {
+    "prefix": "spa",
+    "body": [
+      "<template>",
+      "  <div class=\"$1-page\">",
+      "    <div class=\"$1-page-content\">",
+      "      <h1 class=\"text-4xl text-white\">$1</h1>",
+      "    </div>",
+      "  </div>",
+      "</template>",
+      "",
+      "<script lang=\"ts\">",
+      "import { defineComponent } from 'vue'",
+      "",
+      "export default defineComponent({",
+      "  name: '$1'",
+      "})",
+      "</script>",
+      "",
+      "<style scoped lang=\"scss\">",
+      ".$1-page {",
+      "  @apply flex flex-row justify-center w-full min-h-screen bg-pale-gray;",
+      "}",
+      "",
+      ".$1-page-content {",
+      "  @apply container mt-6;",
+      "}",
+      "</style>",
+      ""
+    ],
+    "description": "Generate Vue SPA template"
+  },
+  "New template tag": {
+    "prefix": "template",
+    "body": [
+      "<template>",
+      "$0",
+      "</template>",
+      ""
+    ]
+  },
+  "Fastify new route template": {
+    "prefix": "route",
+    "body": [
+      "import { FastifyInstance, FastifyPluginOptions } from 'fastify'",
+      "",
+      "export default async (instance: FastifyInstance, _: FastifyPluginOptions): Promise<void> => {",
+      "  instance.get('/', async () => {",
+      "    $0",
+      "  })",
+      "}",
+      ""
+    ],
+    "description": "Generate new fastify route"
+  },
+  "v-mdi tag": {
+    "prefix": "v-mdi",
+    "body": [
+      "<v-mdi name=\"mdi-$1\" fill=\"#D5A755\" />"
+    ]
+  },
+  "new tap test": {
+    "prefix": "test",
+    "body": [
+      "void t.test('$1', async t => {",
+      "  try {",
+      "    const response = await app.inject({$2})",
+      "  } catch (error) {",
+      "    t.error(error)",
+      "    t.fail('There should not be an error in a successful registration.')",
+      "  }",
+      "})"
+    ],
+    "description": ""
+  },
+  "new tap fail": {
+    "prefix": "fail",
+    "body": [
+      "t.error(error)",
+      "t.fail('There should not be an error')"
+    ]
+  }
+}

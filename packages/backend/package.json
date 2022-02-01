@@ -1,0 +1,17 @@
+{
+  "name": "@revair/backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API",
+  "main": "dist/backend/src/server.js",
+  "types": "dist/backend/src/server.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindarius/revair",
+    "directory": "packages/backend"
+  },
+  "author": "Revair Team",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
