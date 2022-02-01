@@ -4,7 +4,7 @@
   Revair. Ticket booking. Redefined. v2
 </h3>
 
-## What is ReebA.
+## What is Revair.
 Revair is a web-based and comminunity-based application for organizing concerts or any events. You can hop in and find tickets from big shows pretty easily with our sites. Along with shows locally from people around you. We also secure your transaction and you can also easily sell or transfer owner of tickets to other users pretty easily *without having to print out the ticket at all*.
 
 Our project consists of
@@ -12,13 +12,13 @@ Our project consists of
 - Revair API: Backend application API with PostgreSQL.
 
 ## Technology stack.
-### ReebA.com
+### Revair.com
 - [Vuejs](https://v3.vuejs.org/) for creating frontend application.
 - [Tailwindcss](https://tailwindcss.com/) for styling our application.
 - [d3.js](https://d3js.org) for creating beautiful graph admin side.
 - [Vite](https://vitejs.dev/) for building our frontend Vuejs application.
 
-### ReebA API.
+### Revair API.
 - [Fastify](https://www.fastify.io/) for serving our api.
 - [PostgreSQL](https://www.postgresql.org/) for our database.
 

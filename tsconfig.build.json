@@ -32,7 +32,7 @@
     "newLine": "lf",
     "resolveJsonModule": true,
     "paths": {
-      "@reeba/*": [
+      "@revair/*": [
         "./packages/*/src"
       ]
     }

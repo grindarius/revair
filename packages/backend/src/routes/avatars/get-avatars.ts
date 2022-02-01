@@ -1,6 +1,6 @@
 import { FastifyInstance, FastifyPluginOptions, FastifySchema } from 'fastify'
 
-import { GetAvatarsParams, GetAvatarsParamsSchema, users } from '@reeba/common'
+import { GetAvatarsParams, GetAvatarsParamsSchema, users } from '@revair/common'
 
 const schema: FastifySchema = {
   params: GetAvatarsParamsSchema

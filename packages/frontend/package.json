@@ -22,14 +22,17 @@
     "dayjs": "^1.10.7",
     "ky": "^0.28.7",
     "pinia": "^2.0.11",
-    "postcss-import": "^14.0.2",
+    "sass": "^1.49.4",
     "vue": "^3.2.25",
     "vue-mdijs": "^0.5.12",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
-    "typescript": "^4.4.4",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.18",
     "vite": "^2.7.2",
     "vue-tsc": "^0.29.8"
   }

@@ -105,7 +105,7 @@
             <div class="mt-5 agree-check">
               <input type="checkbox" id="scales" name="scales" unchecked>
               <label for="scales">
-                By checking out, I agree to <a href="#" class="font-bold underline text-pale-yellow">ReebA's Terms of Service</a>
+                By checking out, I agree to <a href="#" class="font-bold underline text-pale-yellow">Revair's Terms of Service</a>
                 and <a href="" class="font-bold underline text-pale-yellow">Event Organizer's Disclaimer.</a>
                 I accept that the items in this order cannot be canceled and payments are non-refundable.
               </label>

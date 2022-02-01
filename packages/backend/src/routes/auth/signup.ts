@@ -11,7 +11,7 @@ import {
   users,
   validateEmail,
   validateUsername
-} from '@reeba/common'
+} from '@revair/common'
 
 const signupSchema: FastifySchema = {
   body: SignupBodySchema,

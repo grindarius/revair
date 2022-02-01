@@ -8,7 +8,7 @@ import {
   SigninReplyBody,
   SigninReplyBodySchema,
   users
-} from '@reeba/common'
+} from '@revair/common'
 
 import { ACCESS_TOKEN_EXPIRES_TIME } from '../../constants'
 import { createSignPayload } from '../../utils'

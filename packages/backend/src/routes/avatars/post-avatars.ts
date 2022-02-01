@@ -12,7 +12,7 @@ import {
   PostAvatarsParamsSchema,
   PostAvatarsReplyBodySchema,
   users
-} from '@reeba/common'
+} from '@revair/common'
 
 const schema: FastifySchema = {
   params: PostAvatarsParamsSchema,
