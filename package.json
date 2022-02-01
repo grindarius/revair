@@ -17,7 +17,7 @@
     "build:frontend": "cd packages/frontend && npm run build",
     "build:common": "cd packages/common && npm run build",
     "lint:css": "ts-node packages/scripts/src/lint-css.ts",
-    "test": "tap --rcfile=.taprc"
+    "test": "pnpm build:common && tap --rcfile=.taprc"
   },
   "homepage": "https://github.com/grindarius/revair#readme",
   "repository": {
