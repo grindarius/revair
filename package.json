@@ -27,6 +27,9 @@
   "bugs": {
     "url": "https://github.com/grindarius/revair/issues"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "author": "Revair Team",
   "license": "MIT",
   "devDependencies": {

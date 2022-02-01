@@ -1,13 +1,31 @@
 {
   "name": "@revair/frontend",
   "version": "1.0.0",
+  "private": true,
+  "description": "Frontend of Revair",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindarius/revair.git",
+    "directory": "packages/frontend"
+  },
+  "author": "Revair Team",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "pnpm dlx rimraf dist",
+    "fix": "eslint **/*.{vue,ts} --fix"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "@mdi/js": "^6.5.95",
+    "@revair/common": "^1.0.0",
+    "dayjs": "^1.10.7",
+    "ky": "^0.28.7",
+    "pinia": "^2.0.11",
+    "postcss-import": "^14.0.2",
+    "vue": "^3.2.25",
+    "vue-mdijs": "^0.5.12",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
