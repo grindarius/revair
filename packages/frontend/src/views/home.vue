@@ -221,7 +221,7 @@ export default defineComponent({
 }
 
 .event-name {
-  @apply mt-0.5 text-lg font-medium text-black truncate;
+  @apply mt-0.5 text-lg font-medium text-yellow-300 truncate;
 }
 
 .event-time {
