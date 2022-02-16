@@ -1,4 +1,4 @@
-import { emailRegExp, fileExtensionMatchRegExp, usernameRegExp } from '../constants'
+import { emailRegExp, fileExtensionMatchRegExp, phoneNumberRegExp, usernameRegExp } from '../constants'
 
 /**
  * Function for validating user emails whether it's the right format or not.
@@ -35,6 +35,34 @@ export const validateUsername = (username: string): boolean => {
   return true
 }
 
+/**
+ * A function to validate simple phone number without spacebar and at least 4 digits, max 15 digits, will
+ * fail if the string contains any delimiters (` `, `\n`, `\t`)
+ *
+ * @see https://www.quora.com/What-is-maximum-and-minimum-length-of-any-mobile-number-across-the-world
+ *
+ * @param phoneNumber phone number string
+ * @returns boolean indicating whether the format is right
+ */
+export const validatePhoneNumber = (phoneNumber: string): boolean => {
+  if (phoneNumber.length < 4 || phoneNumber.length > 15) {
+    return false
+  }
+
+  if (!phoneNumberRegExp.test(phoneNumber)) {
+    return false
+  }
+
+  return true
+}
+
+/**
+ * Get file extension from a filename, used to extract file extension to rename a file when saving
+ * an image to API. Either returns the extension without the dot, or throw an error about unmatched file extension.
+ *
+ * @param filename the filename
+ * @returns either extension name without the dot, or throw an error about unmatched file extension
+ */
 export const getFileExtension = (filename: string): string => {
   const matches = filename.match(fileExtensionMatchRegExp)
 

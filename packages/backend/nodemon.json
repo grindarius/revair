@@ -6,5 +6,5 @@
   "ignore": [
     "node_modules"
   ],
-  "exec": "pnpm dlx kill-port && pnpm serve:ts-node"
+  "exec": "pnpm kill-port && pnpm serve:ts-node"
 }

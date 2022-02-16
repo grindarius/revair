@@ -40,13 +40,15 @@ void t.test('post image', async t => {
         payload: {
           username: 'postavatartest',
           email: 'postavatartest@gmail.com',
-          password: 'postavatartest_123'
+          password: 'postavatartest_123',
+          phoneCountryCode: '334',
+          phoneNumber: '4304849384'
         }
       })
     }
   } catch (error) {
     t.error(error)
-    t.fail('Error while connecting to database')
+    t.fail()
   }
 
   void t.test('passing empty string as username', async t => {
@@ -60,7 +62,7 @@ void t.test('post image', async t => {
       t.strictSame(response.json().message, 'params should have required property \'username\'', 'error message')
     } catch (error) {
       t.error(error)
-      t.fail('There should not be an error')
+      t.fail()
     }
   })
 
@@ -75,7 +77,7 @@ void t.test('post image', async t => {
       t.strictSame(response.json().message, 'user not found', 'error message')
     } catch (error) {
       t.error(error)
-      t.fail('There should not be an error')
+      t.fail()
     }
   })
 
@@ -95,7 +97,7 @@ void t.test('post image', async t => {
       t.strictSame(response.json().message, 'complete', 'message from posting image')
     } catch (error) {
       t.error(error)
-      t.fail('There should not be an error')
+      t.fail()
     }
   })
 
@@ -115,7 +117,7 @@ void t.test('post image', async t => {
       t.strictSame(response.json().message, 'unmatched file extension', 'message from posting unmatched file extension')
     } catch (error) {
       t.error(error)
-      t.fail('There should not be an error')
+      t.fail()
     }
   })
 })
