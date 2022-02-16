@@ -1,0 +1,26 @@
+{
+  "name": "@reeba/common",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Common functions for ReebA",
+  "main": "dist/index",
+  "types": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindarius/reeba.git",
+    "directory": "packages/common"
+  },
+  "author": "ReebA Team",
+  "scripts": {
+    "serve": "node dist/index.js",
+    "build": "tsc -p ./tsconfig.build.json",
+    "watch": "nodemon",
+    "watch:ts": "tsc -w",
+    "serve:ts-node": "ts-node src/index.ts -p ./tsconfig.json",
+    "clean": "pnpm dlx rimraf dist",
+    "fix": "eslint **/*.ts --fix"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.23.3"
+  }
+}

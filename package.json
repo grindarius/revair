@@ -1,0 +1,60 @@
+{
+  "name": "revair",
+  "version": "1.0.0",
+  "description": "Ticket booking, redefined. v2",
+  "private": true,
+  "keywords": [
+    "ticket",
+    "shows",
+    "booking"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev:backend": "cd packages/backend && npm run watch",
+    "dev:frontend": "cd packages/frontend && npm run dev",
+    "dev:common": "cd packages/common && npm run watch",
+    "build:backend": "cd packages/backend && npm run build",
+    "build:frontend": "cd packages/frontend && npm run build",
+    "build:common": "cd packages/common && npm run build",
+    "lint:css": "ts-node packages/scripts/src/lint-css.ts",
+    "test": "pnpm build:common && tap --rcfile=.taprc"
+  },
+  "homepage": "https://github.com/grindarius/revair#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindarius/revair.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grindarius/revair/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Revair Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.14",
+    "@types/tap": "^15.0.5",
+    "@typescript-eslint/eslint-plugin": "4.29.3",
+    "@typescript-eslint/parser": "4.29.3",
+    "@vue/eslint-config-standard": "6.1.0",
+    "@vue/eslint-config-typescript": "7.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-config-standard-with-typescript": "20.0.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-unused-imports": "1.1.4",
+    "eslint-plugin-vue": "7.16.0",
+    "nodemon": "^2.0.15",
+    "postcss-html": "^1.3.0",
+    "stylelint": "^14.3.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-recommended-vue": "^1.1.0",
+    "tap": "^15.1.6",
+    "ts-node": "^10.4.0",
+    "typescript": "4.5.2"
+  }
+}

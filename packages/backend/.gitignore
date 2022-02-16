@@ -1,0 +1,5 @@
+# ignore images stored in /uploads except default-user-profile.png
+
+!uploads
+uploads/*
+!uploads/default-user-profile.png
