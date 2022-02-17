@@ -1,6 +1,12 @@
 <template>
   <div class="home-page">
     <div class="container w-full min-h-screen">
+      <div class="flex flex-col items-center">
+        <img src="@/assets/reeba-logo.png" alt="Banner" class="max-w-md">
+        <h1 class="font-sans text-4xl font-bold text-white">
+          Ticket booking, redefined.
+        </h1>
+      </div>
       <div class="official-events-box">
         <div class="event-section">
           <h1 class="text-main-event-name">

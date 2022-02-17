@@ -1,31 +1,34 @@
 [English](README.md) | [Thai](/docs/README-th.md)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60266519/147319453-ac26e0ca-eca1-43a9-9aea-79426e3fbf6a.png" alt="ReebA Logo">
+</p>
 <h3 align="center">
-  Revair. Ticket booking. Redefined. v2
+  Ticket booking. Redefined.
 </h3>
 
-## What is Revair.
-Revair is a web-based and comminunity-based application for organizing concerts or any events. You can hop in and find tickets from big shows pretty easily with our sites. Along with shows locally from people around you. We also secure your transaction and you can also easily sell or transfer owner of tickets to other users pretty easily *without having to print out the ticket at all*.
+## What is ReebA.
+ReebA (pronounce Reeb-Ah) is a web-based and comminunity-based application for organizing concerts or any events. You can hop in and find tickets from big shows pretty easily with our sites. Along with shows locally from people around you. We also secure your transaction and you can also easily sell or transfer owner of tickets to other users pretty easily *without having to print out the ticket at all*.
 
 Our project consists of
-- Revair.com: Frontend application.
-- Revair API: Backend application API with PostgreSQL.
+- ReebA.com: Frontend application.
+- ReebA API: Backend application API with PostgreSQL.
 
 ## Technology stack.
-### Revair.com
+### ReebA.com
 - [Vuejs](https://v3.vuejs.org/) for creating frontend application.
 - [Tailwindcss](https://tailwindcss.com/) for styling our application.
 - [d3.js](https://d3js.org) for creating beautiful graph admin side.
 - [Vite](https://vitejs.dev/) for building our frontend Vuejs application.
 
-### Revair API.
+### ReebA API.
 - [Fastify](https://www.fastify.io/) for serving our api.
 - [PostgreSQL](https://www.postgresql.org/) for our database.
 
 ## Prequistics.
 ### Check the required versions.
 
-- Node.js v16 or higher.
+- Node.js v14 or higher.
   You can check by typing
   ```
   node -v
@@ -78,16 +81,16 @@ pnpm install --frozen-lockfile
 ```
 because `pnpm install --frozen-lockfile` will install dependencies *without* editing `pnpm-lock.yaml`. If there's an error installing dependencies with `pnpm install --frozen-lockfile`, then use the fallback `pnpm install`
 
-### Database setup (Revair API).
+### Database setup (ReebA API).
 **Reminder: this topic needs to be done only once.**
 
-At Revair, we use [PostgreSQL](https://www.postgresql.org/) to store user data and credentials, this section will teach you how to set up the database locally. But first of all
+At ReebA, we use [PostgreSQL](https://www.postgresql.org/) to store user data and credentials, this section will teach you how to set up the database locally. But first of all
 
 - You should have PostgreSQl installed in your machine.
 - You should know your master password of `postgres` superuser. (They will ask for it during the installation).
 - You should be able to use `psql` command.
 
-If top 3 requirements surpassed. You're ready to develop Revair's database. These are steps to get the database running.
+If top 3 requirements surpassed. You're ready to develop ReebA's database. These are steps to get the database running.
 
 **WARNING: You should follow the instructions exactly or you'll end up with a broken database that's super hard to work with and fix.**
 
@@ -110,7 +113,7 @@ If top 3 requirements surpassed. You're ready to develop Revair's database. Thes
 
 - Run
   ```
-  postres=# CREATE DATABASE "revair";
+  postres=# CREATE DATABASE "reeba";
   ```
 
   You should see
@@ -121,23 +124,23 @@ If top 3 requirements surpassed. You're ready to develop Revair's database. Thes
 
 - Run
   ```
-  postgres=# \c postgres://postgres@localhost:5432/revair
+  postgres=# \c postgres://postgres@localhost:5432/reeba
   ```
   put in your `postgres` superuser password, You should see a message saying
 
   ```
-  You are now connected to database "revair" as user "postgres".
+  You are now connected to database "reeba" as user "postgres".
   ```
   This means you've successfully connected to the database.
 
   You can see tables and relations by typing
   ```
-  revair=# \dt
+  reeba=# \dt
   ```
 
 - Migrate the database with schema by running
   ```
-  revair=# \i database.sql
+  reeba=# \i database.sql
   ```
   I don't know how would it look like for new users, but if the command success there should be a bunch of `CREATE TABLE` pops out.
 
@@ -153,13 +156,13 @@ If top 3 requirements surpassed. You're ready to develop Revair's database. Thes
 
   The `.env.local` file should look like this
   ```
-  FASTIFY_PORT='3001'
+  FASTIFY_PORT='3000'
   JWT_SECRET=
   POSTGRES_USERNAME=
   POSTGRES_PASSWORD=
   POSTGRES_HOSTNAME='localhost'
   POSTGRES_PORT='5432'
-  POSTGRES_DBNAME='revair'
+  POSTGRES_DBNAME='reeba'
   ```
 
   Fill in the missing variables behind the equal sign into `.env.local` file.
@@ -169,14 +172,14 @@ If top 3 requirements surpassed. You're ready to develop Revair's database. Thes
 
   All fields should be wrapped in single quotes. With all these you should be ready to develop the API.
 
-### Revair.com.
+### ReebA.com.
 Run this command from the root of the project
 ```
 pnpm build:common && pnpm dev:frontend
 ```
 and you should see the website pop up at `http://localhost:8080`.
 
-### Revair API.
+### ReebA API.
 First of all, you have to start PostgreSQL database server.
 
 - Open up separate terminal inside `backend` folder. Run
@@ -186,18 +189,18 @@ First of all, you have to start PostgreSQL database server.
   and put in your `postgres` password.
 - Run
   ```
-  postgres=# \c postgres://postgres@localhost:5432/revair
+  postgres=# \c postgres://postgres@localhost:5432/reeba
   ```
   and put in your `postgres` password.
 
   You will see
   ```
-  You are now connected to database "revair" as user "postgres".
+  You are now connected to database "reeba" as user "postgres".
   ```
 
   Migrate the database with
   ```
-  revair=# \i database.sql
+  reeba=# \i database.sql
   ```
   You're ready to develop.
 
@@ -206,7 +209,7 @@ Run these commands from the root of the project.
 | -----------------------  | ----------------------  |
 | `pnpm dev:common`        | `pnpm dev:backend`      |
 
-You will see the API runs at `http://localhost:3001`.
+You will see the API runs at `http://localhost:3000`.
 
 ### Full system development.
 First of all, you have to start PostgreSQL database server.
@@ -218,18 +221,18 @@ First of all, you have to start PostgreSQL database server.
   and put in your `postgres` password.
 - Run
   ```
-  postgres=# \c postgres://postgres@localhost:5432/revair
+  postgres=# \c postgres://postgres@localhost:5432/reeba
   ```
   and put in your `postgres` password.
 
   You will see
   ```
-  You are now connected to database "revair" as user "postgres".
+  You are now connected to database "reeba" as user "postgres".
   ```
 
   Migrate the database with
   ```
-  revair=# \i database.sql
+  reeba=# \i database.sql
   ```
   You're ready to develop.
 
@@ -238,4 +241,29 @@ Open 3 terminals and run these commands from the root of the project.
 | -----------------------  | ----------------------  | ---------------------  |
 | `pnpm dev:common`        | `pnpm dev:frontend`     | `pnpm dev:backend`     |
 
-You will see the API runs at `http://localhost:3001` and frontend server runs at `http://localhost:8080`
+You will see the API runs at `http://localhost:3000` and frontend server runs at `http://localhost:8080`
+
+## Testing
+Our `common` and `backend` module will be tested using [`tap`](https://github.com/tapjs/node-tap). This is how to run the test.
+
+- Build `common` module by running
+  ```
+  pnpm build:common
+  ```
+  from the root of the project.
+
+- Then run
+  ```
+  pnpm test
+  ```
+  to see results.
+
+**All tests should pass before submitting PRs**
+
+## Database seeding
+In ReebA, there's a command called `seed` and `inject` that you can run to seed your database.
+
+- `pnpm seed` will generate data based on seed (112233) so all the data will be the same.
+- `pnpm inject` will inject the data into the database (please do note that this feature is incomplete and subject to change in the future).
+
+Please bear in mind that `pnpm inject` will only work if backend server is running. You have to run `pnpm dev:backend` from one terminal and use the other terminal to run `pnpm inject`. This hassle is being noted and the change is coming in the future.
