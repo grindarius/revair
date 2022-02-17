@@ -89,7 +89,7 @@ export default defineComponent({
   setup () {
     const width = 800
     const height = 600
-    const colorRange: [string, string] = ['#222', '#D5A755']
+    const colorRange: [string, string] = ['#222', '#B47EDE']
 
     const selectedChartType = ref('users')
 
