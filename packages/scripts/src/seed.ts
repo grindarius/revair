@@ -135,7 +135,7 @@ const generateUserList = async (amount: number): Promise<Array<users>> => {
       user_image_profile_path: '',
       user_verification_status: faker.mersenne.rand(1, 100) < 70,
       user_phone_country_code: faker.random.arrayElement(countriesValues).phone.split(',')[0],
-      user_phone_number: faker.phone.phoneNumber('09########'),
+      user_phone_number: faker.phone.phoneNumber('9########'),
       user_birthdate: dayjs(faker.date.between('1960-01-01', '2006-01-01')).format('YYYY-MM-DD')
     }
 
@@ -170,7 +170,7 @@ const generateEvent = async (userList: Array<users>, amount: number = 30): Promi
 
   // eslint-disable-next-line
   for await (const _ of [...range(amount)]) {
-    const creationDateString = dayjs(faker.date.between('2020-01-01', dayjs().format('YYYY-MM-DD'))).toISOString()
+    const creationDateString = dayjs(faker.date.between(dayjs().subtract(2, 'month').toISOString(), dayjs().format('YYYY-MM-DD'))).toISOString()
     const pricesArray = generateEventPrices()
     const coordinates = {
       x: Number(faker.address.latitude()),
@@ -393,13 +393,13 @@ const main = async () => {
   await client.connect()
 
   console.log(chalk.blue('Generating users...'))
-  const users = await generateUserList(20)
+  const users = await generateUserList(100)
 
   console.log(chalk.blue('Generating users followers...'))
   const followersList = generateFollowersList(users, 1000)
 
   console.log(chalk.blue('Generating events related data...'))
-  const eventData = await generateEvent(users, 5)
+  const eventData = await generateEvent(users, 10)
 
   console.log(chalk.blue('Generating transactions...'))
   const transactions = generateTransactions(users, eventData)
@@ -696,5 +696,5 @@ const main = async () => {
 // eslint-disable-next-line
 main().then(() => {
   console.log(chalk.green('done!'))
-  exit(1)
+  exit()
 })

@@ -17,19 +17,19 @@
                 </h1>
                 <div class="payment-types">
                   <div class="payment-method">
-                    <v-mdi name="mdi-credit-card" fill="#D5A755" size="32" />
+                    <v-mdi name="mdi-credit-card" fill="#B47EDE" size="32" />
                     <h1 class="mt-2 font-sans text-white text-md">
                       Credit card
                     </h1>
                   </div>
                   <div class="payment-method">
-                    <v-mdi name="mdi-google" fill="#D5A755" size="32" />
+                    <v-mdi name="mdi-google" fill="#B47EDE" size="32" />
                     <h1 class="mt-2 font-sans text-white text-md">
                       Google Pay
                     </h1>
                   </div>
                   <div class="payment-method">
-                    <v-mdi name="mdi-qrcode-scan" fill="#D5A755" size="32" />
+                    <v-mdi name="mdi-qrcode-scan" fill="#B47EDE" size="32" />
                     <h1 class="mt-2 font-sans text-white text-md">
                       QR Code
                     </h1>
