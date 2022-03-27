@@ -1,3 +1,8 @@
+**We're moved!**
+
+This repository is a copycat work meant for another subject, we realized it's so hard to copy work to other repo while maintaining 2 workflows, so we're combining it into one!
+Check out [here](https://github.com/grindarius/reeba)
+
 [English](README.md) | [Thai](/docs/README-th.md)
 
 <p align="center">
